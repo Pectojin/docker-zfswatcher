@@ -2,8 +2,8 @@ version: '2'
 
 services:
   zfswatcher:
+    container_name: zfswatcher
     image: pectojin/zfswatcher:latest
-    build: .
     volumes:
       - /etc/zfswatcher:/zfswatcher_config:rw
       - /var/log/zfswatcher/zfswatcher.log:/var/log/zfswatcher/zfswatcher.log:rw

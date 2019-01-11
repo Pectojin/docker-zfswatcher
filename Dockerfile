@@ -1,9 +1,6 @@
 FROM ubuntu:latest
 
-RUN apt-get update
-RUN apt-get install -y curl lsb-release 
-RUN apt-get install -y zfs-dkms zfsutils-linux
-RUN apt-get -y update
+RUN apt-get update && apt-get install -y curl lsb-release zfs-dkms zfsutils-linux && apt-get -y update
 RUN rm -rf /var/lib/apt/lists/*
 
 ENV zfswatcher_package="zfswatcher_0.4.6-1_amd64.deb" \
