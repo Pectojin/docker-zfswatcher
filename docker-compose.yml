@@ -8,6 +8,7 @@ services:
       - /etc/zfswatcher:/zfswatcher_config:rw
       - /var/log/zfswatcher/zfswatcher.log:/var/log/zfswatcher/zfswatcher.log:rw
       - /dev/log:/dev/log:rw
+      - /etc/hostid:/etc/hostid
     ports:
       - 8990:8990
     devices:
